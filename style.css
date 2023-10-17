@@ -8,36 +8,15 @@ html {
 }
 
 body {
-    color: var(--text-color);
-    font: var(--font-size) var(--font-family-primary);
-    line-height: var(--line-height);
     margin: 0;
     padding: 0;
     word-wrap: break-word;
 }
 
-.page__inner {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    min-height: 100vh;
-}
-
-.page__inner *, .page__inner ::after, .page__inner ::before {
-    box-sizing: inherit;
-}
-
-form {
-    display: block;
-    margin-top: 0em;
-}
-
 .form--feedback {
     max-width: 800px;
-}
-
-.form--feedback {
+    display: block;
+    margin-top: 0em;
     box-sizing: border-box;
     color: #000;
     line-height: 1.33;
@@ -45,8 +24,6 @@ form {
     background: #fff;
     padding: 20px;
 }
-
-
 
 .form__title{
     font-size: 34px;
@@ -62,22 +39,16 @@ form {
 
 .form__intro {
     font-size: 15px;
-
 }
 
-.form__themes {
-    display: block;
-    position: relative;
-}
 
-.form--feedback .form__section {
+.form__section {
     font-size: 13px;
     margin-bottom: 20px;
     margin-top: 20px
 }
 
-.form--feedback .form__columns {
-
+.form__rows {
     display: flex;
     flex-flow: row wrap;
     justify-content: start;
@@ -85,8 +56,7 @@ form {
     margin-right: -20px;
 }
 
-.form--feedback .form__rows {
-    /*align-items: center;*/
+.form__columns {
     display: flex;
     flex-flow: column wrap;
     justify-content: start;
@@ -94,22 +64,6 @@ form {
     margin-right: 0px;
     width: 50%;
 }
-.form--feedback .form__rows > .form__field {
-    padding-left: 20px;
-    padding-right: 20px;
-
-}
-
-style attribute {
-    visibility: visible;
-    animation-duration: 0.5s;
-    animation-name: zoomIn;
-}
-
-.form--feedback .form__fields {
-    margin-bottom: 1.2em;
-}
-
 
 .form__hidden {
     display: none !important;
@@ -117,17 +71,9 @@ style attribute {
     visibility: hidden;
 }
 
-.form--feedback .form__content {
-    background: #fff;
-    padding: 25px;
-}
-
-.form__themes {
-    display: block;
-    position: relative;
-}
-
-.form--feedback .form__field {
+.form__field {
+    padding-left: 20px;
+    padding-right: 20px;
     align-items: center;
     display: flex;
     flex-flow: row wrap;
@@ -137,7 +83,8 @@ style attribute {
     text-align: left;
 }
 
-.form--feedback .form__value--rounded {
+
+.form__value--rounded {
     border: 1px solid #e1e6eb;
     border-radius: 2em;
     display: block;
@@ -146,65 +93,51 @@ style attribute {
     transition: all 0.2s;
 }
 
-.form--feedback input:checked + .form__value--rounded, .form--feedback .is-selected .form__value--rounded {
+input:checked + .form__value--rounded{
     background: #bd0a13;
     border-color: #bd0a13;
     color: #fff;
 }
 
-.form--feedback .form__columns > .form__field {
+.form__rows > .form__field {
     padding-left: 20px;
     padding-right: 20px;
     width: 50%;
 }
 
-.form--feedback .form__themes .form__option {
-    width: 33.333%;
-}
 
-.form--feedback .form__themes .form__option {
+.form__option {
+    width: 33.333%;
     padding-left: 12px;
     padding-right: 12px;
-}
-
-.form--feedback .form__themes .form__option {
     margin-bottom: 10px;
     width: 100%;
 }
 
-.form--feedback *, .form--feedback *::before, .form--feedback *::after {
+* {
     box-sizing: inherit;
 }
 
-.form--feedback .form__label {
+.form__label {
     cursor: pointer;
     display: block;
     position: relative;
 }
 
-
-
-.form--feedback .form__field-name {
+.form__field-name {
     flex: 0 1 95px;
     margin: 0;
     padding-right: 0.5em;
     text-align: left;
-}
-
-.form--feedback .form__field-name {
     margin-bottom: 0.5em;
 }
 
-.form--feedback .form__field-name, .form--feedback .form__field-input {
-    width: 100%;
-}
-
-.form--feedback .form__field-input {
+.form__field-input {
     flex: 1 0;
     position: relative;
 }
 
-.form--feedback .form__input {
+.form__input {
     background: #fff;
     border: 1px solid #c7cfd6;
     border-radius: 3px;
@@ -214,21 +147,12 @@ style attribute {
     width: 100%;
 }
 
-.form--feedback input, .form--feedback textarea, .form--feedback select {
-    font: inherit;
-    max-width: 100%;
-    outline: none;
-}
-
-button, input {
-    overflow: visible;
-}
-
-button, input, optgroup, select, textarea {
+button {
     font-family: inherit;
     font-size: 100%;
     line-height: 1.15;
     margin: 0;
+    overflow: visible;
 }
 
 input {
@@ -243,10 +167,8 @@ input {
     display: inline-block;
     text-align: start;
     appearance: auto;
-    -webkit-rtl-ordering: logical;
     cursor: text;
     background-color: field;
-    writing-mode: horizontal-tb !important;
     margin: 0em;
     padding: 1px 0px;
     border-width: 2px;
@@ -255,29 +177,37 @@ input {
     border-image: initial;
     padding-block: 1px;
     padding-inline: 2px;
-}
-
-.form--feedback textarea {
-    max-height: 11em;
-    min-height: 4.5em;
-    resize: vertical;
-}
-.form--feedback input, .form--feedback textarea, .form--feedback select {
     font: inherit;
     max-width: 100%;
     outline: none;
+    overflow: visible;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+textarea {
+    max-height: 11em;
+    min-height: 4.5em;
+    resize: vertical;
+    font: inherit;
+    max-width: 100%;
+    outline: none;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
 }
 
 select {
-  appearance: none;
-  width: 100%;
-  padding: 0px;
-
-  border-radius: 0px;
-}
-
-select {
-
+font: inherit;
+    max-width: 100%;
+    outline: none;
+    appearance: none;
+    width: 100%;
+    padding: 0px;
+    border-radius: 0px;
     background: #fff;
     border: 1px solid #c7cfd6;
     border-radius: 3px;
@@ -285,9 +215,13 @@ select {
     padding: 0.85em;
     transition: all 0.2s;
     width: 100%;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
 }
 
-.form--feedback .form__button {
+.form__button {
     background: linear-gradient(to bottom, #c61526 0%, #b30a1a 100%);
     border: none;
     border-radius: 2em;
