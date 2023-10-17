@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Окно обратной связи</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="page__inner">
+    <div class="form form--feedback">
+        <div class="form__content">
+
+            <h1 class="form__title">Обратная связь</h1>
+
+
+            <form action="https://www.google.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+
+                <div class="form__fields">
+                    <h3 class="form__intro"> Заполните форму сейчас и наш специалист свяжется с вами для консультации и
+                        составит
+                        ваше персональное предложение.</h3>
+
+                    <div class="form__section">
+                        <div class="form__field">
+                                <div class="form__field-name">Для поисковика</div>
+                                <div class="form__field-input">
+                                    <input type="text" name="q" value class="form__input">
+                                </div>
+                            </div>
+                        <h2 class="form__title form__title--medium">1. КАКИЕ ВИДЫ УСЛУГ ВАС ИНТЕРЕСУЮТ?</h2>
+                        <div class="form__field form__themes">
+                            <div class="form__columns">
+
+
+                                <div class="form__option">
+                                    <label class="form__label">
+                                        <input type="checkbox" name="typeOfService" value="promotion"
+                                               class="form__hidden">
+                                        <span class="form__value form__value--rounded">Продвижение сайта</span>
+                                    </label>
+                                </div>
+
+                                <div class="form__option">
+                                    <label class="form__label">
+                                        <input type="checkbox" name="typeOfService" value="creation"
+                                               class="form__hidden">
+                                        <span class="form__value form__value--rounded">Создание сайта</span>
+                                    </label>
+                                </div>
+
+                                <div class="form__option">
+                                    <label class="form__label">
+                                        <input type="checkbox" name="typeOfService" value="contextualAdvertising"
+                                               class="form__hidden">
+                                        <span class="form__value form__value--rounded">Контекстная реклама</span>
+                                    </label>
+                                </div>
+
+                                <div class="form__option">
+                                    <label class="form__label">
+                                        <input type="checkbox" name="typeOfService" value="smm" class="form__hidden">
+                                        <span class="form__value form__value--rounded">Социальные сети (SMM)</span>
+                                    </label>
+                                </div>
+
+                                <div class="form__option">
+                                    <label class="form__label">
+                                        <input type="checkbox" name="typeOfService" value="marketplace"
+                                               class="form__hidden">
+                                        <span class="form__value form__value--rounded">Маркетплейсы</span>
+                                    </label>
+                                </div>
+
+                                <div class="form__option">
+                                    <label class="form__label">
+                                        <input type="checkbox" name="typeOfService" value="others" class="form__hidden">
+                                        <span class="form__value form__value--rounded">Другое</span>
+                                    </label>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form__section">
+
+                        <h2 class="form__title form__title--medium">2. РАССКАЖИТЕ О ВАШЕМ ПРОЕКТЕ</h2>
+
+                        <div class="form__columns">
+                            <div class="form__field">
+                                <div class="form__field-name">Контактное лицо</div>
+                                <div class="form__field-input">
+                                    <input type="text" name="name" value class="form__input">
+                                </div>
+                            </div>
+                            <div class="form__field">
+                                <div class="form__field-name">Телефон</div>
+                                <div class="form__field-input">
+                                    <input type="tel" name="phone" value="+7" class="form__input">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form__columns">
+                            <div class="form__rows">
+                                <div class="form__field">
+                                    <div class="form__field-name">E-mail</div>
+                                    <div class="form__field-input">
+                                        <input type="email" name="email" value class="form__input">
+                                    </div>
+                                </div>
+                                <div class="form__field">
+                                    <div class="form__field-name">Откуда узнали о нас</div>
+                                    <div class="form__field-input">
+                                        <div class="select-wrapper">
+                                            <select name="awareness" id="awareness-select">
+                                                <option selected disabled>Выберите</option>
+                                                <option value="internet">В интернете</option>
+                                                <option value="linkInSocial">Ссылка в соцсети</option>
+                                                <option value="newsletter">E-mail рассылкам</option>
+                                                <option value="outdoorAdvertising">Наружная рекламам</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__field">
+                                <div class="form__field-name">Ваш комментарий</div>
+                                <div class="form__field-input">
+                                    <textarea name="commentary" class="form__input" style="height: 104px;"></textarea>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="form__buttons">
+                    <button class="form__button" type="submit" name="submit">ОТПРАВИТЬ</button>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
